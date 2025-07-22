@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gabstep - Educational Consultancy for Study Abroad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="image/gabstep_favicon.png">
+  <style>
+    /* Testimonial Section Styles */
+.testimonies-section {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.testimonies-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.testimonies-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.testimonies-header p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.testimonial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.testimonial-card {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.testimonial-card .card-image-container {
+  height: 200px;
+  position: relative;
+}
+
+.testimonial-card .card-image-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-card .card-content {
+  padding: 20px;
+}
+
+.testimonial-card .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.testimonial-card .card-description {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.testimonial-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.testimonial-location {
+  font-size: 0.9rem;
+  color: #3498db;
+  font-weight: 600;
+}
+
+.testimonial-rating {
+  color: #f39c12;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+
+<body>
+<!-- Preloader -->
+<div id="preloader">
+  <div class="preloader-content">
+    <img src="image/gabstep_logo.png" alt="Gabstep Logo" class="preloader-logo">
+    <div class="animated-text">
+      <span class="letter">G</span>
+      <span class="letter">a</span>
+      <span class="letter">b</span>
+      <span class="letter">s</span>
+      <span class="letter">t</span>
+      <span class="letter">e</span>
+      <span class="letter">p</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header / Navigation -->
+<header>
+  <div class="header-container">
+    <!-- Logo and Brand -->
+    <a href="#" class="logo">
+      <img src="image/gabstep_logo.png" alt="logo" style="width: 30px;">
+      <span class="logo-text">Gabstep</span>
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="main-nav">
+      <a href="#" aria-current="page" class="nav-link active">Home</a>
+      
+      <div class="dropdown">
+        <button class="dropdown-btn" data-target="service-dropdown">
+          <span>Service</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="dropdown-menu" id="service-dropdown">
+          <button class="dropdown-close-btn" data-target="service-dropdown">×</button>
+          <a href="#services" class="dropdown-item">Study Visas</a>
+          <a href="#family-visas" class="dropdown-item">Family Visas</a>
+          <a href="#work-visas" class="dropdown-item">Work Visas</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-btn" data-target="about-dropdown">
+          <span>About Us</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="dropdown-menu" id="about-dropdown">
+          <button class="dropdown-close-btn" data-target="about-dropdown">×</button>
+          <a href="#about" class="dropdown-item">Our Story</a>
+          <a href="#why-choose" class="dropdown-item">Why Choose Us</a>
+          <a href="#achievements" class="dropdown-item">Our Achievements</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-btn" data-target="contact-dropdown">
+          <span>Contact</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="dropdown-menu" id="contact-dropdown">
+          <button class="dropdown-close-btn" data-target="contact-dropdown">×</button>
+          <a href="consultForm" class="dropdown-item">Contact Form</a>
+          <a href="contact.html" class="dropdown-item">Locations</a>
+        </div>
+      </div>
+      
+      <a href="#news-blog" class="nav-link">News & Blog</a>
+      <a href="feedback.html" class="btn" aria-label="Open Feedback Form">
+        <i class="fas fa-comment-alt"></i>
+        <span>Feedback</span>
+      </a>
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img 
+      src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b19a31f-9593-4bed-9a04-ccada77f0ad8.png" 
+      alt="Young African woman graduate student wearing a black cap and gown looking with hopeful expression at a large world map hanging on the wall" 
+      class="hero-image" 
+      loading="lazy" 
+    />
+    <div class="hero-content">
+      <h1 class="hero-title">
+        EDUCATIONAL CONSULTANCY<br>FOR STUDY ABROAD
+      </h1>
+      <p class="hero-text">
+        Discover endless opportunities and broaden your horizons with our educational consultancy for study abroad.
+      </p>
+      <button id="consultantBtn" class="hero-btn" aria-label="Talk To Our Consultant">
+        Talk To Our Consultant
+      </button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="about-content">
+      <article>
+        <h2 class="section-title">About Gabstep</h2>
+        <p class="about-text">
+          <strong>Gabstep</strong> is a leading study abroad and career consultancy in Nigeria, dedicated to guiding students through the intricacies of abroad studies and career counselling. Our mission revolves around empowering students for a brighter future by providing expert career consulting.
+        </p>
+        <p class="about-text">
+          As Study Abroad Consultants and Career counselors, we specialize in making complex fields of interest understandable, ensuring that students embark on a path that aligns with their aspirations.
+        </p>
+
+        <h3 class="strengths-title">Core Strengths</h3>
+
+        <div class="stats-card" role="list" aria-label="Gabstep core strengths metrics">
+          <div class="stat-item" role="listitem" tabindex="0" aria-label="More than 1000 partner schools">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Partner Schools</div>
+          </div>
+          <div class="stat-item" role="listitem" tabindex="0" aria-label="More than 500 approved visas">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Approved Visas</div>
+          </div>
+          <div class="stat-item" role="listitem" tabindex="0" aria-label="More than 120 successful permanent residents">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">Successful PR</div>
+          </div>
+          <div class="stat-item" role="listitem" tabindex="0" aria-label="96 percent satisfied customers">
+            <div class="stat-number">96%</div>
+            <div class="stat-label">Satisfied Customers</div>
+          </div>
+        </div>
+
+        <button id="readMoreBtn" type="button" class="readmore-btn" aria-expanded="false" aria-controls="more-info">
+          Read More
+        </button>
+        <a href="about.html" class="learnmore-btn">Learn More</a>
+
+        <div id="more-info" class="more-info">
+          <p>Gabstep has helped thousands of students find their ideal career path through personalized counseling and guidance. We collaborate with top universities worldwide and assist in every step of the application and visa process to ensure a smooth transition for our clients.</p>
+          <p>Our approach emphasizes student empowerment, cultural readiness, and academic success. We also provide career mentoring and interview preparation workshops to better prepare students for global opportunities.</p>
+        </div>
+      </article>
+
+      <!-- Education Carousel -->
+      <div class="carousel-container">
+        <div class="carousel" id="education-carousel">
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="University campus" class="carousel-image">
+            <div class="carousel-caption">
+              <h3>Top Universities</h3>
+              <p>Partner institutions worldwide</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Students studying" class="carousel-image">
+            <div class="carousel-caption">
+              <h3>Student Success</h3>
+              <p>Our students achieve their dreams</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Graduation ceremony" class="carousel-image">
+            <div class="carousel-caption">
+              <h3>Graduation</h3>
+              <p>Celebrating academic achievements</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="prev-btn">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7 7-7-7" />
+            </svg>
+          </button>
+          <button class="carousel-btn" id="next-btn">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        <div class="carousel-indicators" id="carousel-indicators">
+          <div class="indicator active"></div>
+          <div class="indicator"></div>
+          <div class="indicator"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="service-header">
+      <p class="service-subtitle">❧ Our Service ❧</p>
+      <h1 class="service-title">What We Do</h1>
+      <p class="service-description">
+        Gabstep, the best career and abroad consultant, offers comprehensive 360° services in consulting.
+        Our tailored services ensure you navigate your goals with ease and confidence. Experience unparalleled quality and professionalism
+        in our suite of services designed to meet your unique needs.
+      </p>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="tabs-container">
+      <button class="tab-btn active-tab" onclick="showStudyVisas()">Study Visas</button>
+      <button class="tab-btn" onclick="showFamilyVisas()">Family Visas</button>
+      <button class="tab-btn" onclick="showWorkVisas()">Work Visas</button>
+    </div>
+
+    <!-- Study Visas Cards Grid -->
+    <div id="study-visas" class="cards-grid">
+      <!-- Canada Study Visa -->
+      <div class="service-card" data-country="canada">
+        <div class="card-image-container">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="University of Toronto campus" class="card-image-bg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6a9b48f0-fc80-4ec6-84fa-5c85f89c2466.png" 
+               alt="Graduation cap icon" class="card-icon">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Canada Study Visa</h2>
+          <p class="card-description">
+            Pursue world-class education in Canada with our comprehensive study visa assistance. We guide you through the entire process from university selection to visa approval.
+          </p>
+          <a href="readmore/CanadaReadMore.html" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- UK Study Visa -->
+      <div class="service-card" data-country="uk">
+        <div class="card-image-container">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="University of Oxford campus" class="card-image-bg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3395769d-d48c-45eb-9be0-1bee50e5fbd7.png" 
+               alt="Graduation cap icon" class="card-icon">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">UK Study Visa</h2>
+          <p class="card-description">
+            Study at prestigious UK universities with our expert guidance. We handle everything from application to visa processing for a seamless experience.
+          </p>
+          <a href="readmore/UkReadMore.html" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+
+      <!-- Malta Study Visa -->
+      <div class="service-card" data-country="malta">
+        <div class="card-image-container">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="University of Malta campus" class="card-image-bg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c66e4a51-149d-4b1d-b2e9-924c12ae5e39.png" 
+               alt="Graduation cap icon" class="card-icon">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Malta Study Visa</h2>
+          <p class="card-description">
+            Affordable European education with English-taught programs. We specialize in Malta study visa applications and university placements.
+          </p>
+          <a href="readmore/MaltaReadMore.html" class="read-more-btn">Read More</a>      
+        </div>
+      </div>
+    </div>
+
+    <!-- Family Visas Cards Grid (Hidden by default) -->
+    <div id="family-visas" class="cards-grid" style="display: none;">
+      <!-- Canada Family Visa -->
+      <div class="service-card" data-country="canada-family">
+        <div class="card-image-container">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="Happy family in Canada" class="card-image-bg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6a9b48f0-fc80-4ec6-84fa-5c85f89c2466.png" 
+               alt="Family icon" class="card-icon">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Canada Family Visa</h2>
+          <p class="card-description">
+            Reunite with your loved ones in Canada. We assist with family sponsorship and visa applications for spouses, children, and parents.
+          </p>
+          <button class="read-more-btn" onclick="toggleServiceDetail(this)">Read More</button>
+          <div class="service-detail">
+            <p>Our Canada Family Visa service includes:</p>
+            <p>- Spousal sponsorship application assistance</p>
+            <p>- Dependent child visa processing</p>
+            <p>- Parent and grandparent super visa applications</p>
+            <p>- Family sponsorship eligibility assessment</p>
+            <p>- Document preparation and submission guidance</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UK Family Visa -->
+      <div class="service-card" data-country="uk-family">
+        <div class="card-image-container">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="Family in UK" class="card-image-bg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3395769d-d48c-45eb-9be0-1bee50e5fbd7.png" 
+               alt="Family icon" class="card-icon">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">UK Family Visa</h2>
+          <p class="card-description">
+            Bring your family together in the UK. We provide expert guidance on spouse visas, dependent visas, and family reunion applications.
+          </p>
+          <button class="read-more-btn" onclick="toggleServiceDetail(this)">Read More</button>
+          <div class="service-detail">
+            <p>Our UK Family Visa service includes:</p>
+            <p>- Spouse visa application support</p>
+            <p>- Dependent child visa processing</p>
+            <p>- Financial requirement guidance</p>
+            <p>- English language test assistance</p>
+            <p>- Settlement visa extensions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Visas Cards Grid (Hidden by default) -->
+    <div id="work-visas" class="cards-grid" style="display: none;">
+      <!-- Canada Work Visa -->
+      <div class="service-card" data-country="canada-work">
+        <div class="card-image-container">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="Workers in Canada" class="card-image-bg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6a9b48f0-fc80-4ec6-84fa-5c85f89c2466.png" 
+               alt="Work icon" class="card-icon">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Canada Work Visa</h2>
+          <p class="card-description">
+            Work in Canada with our expert visa assistance. We help with work permits, express entry, and skilled worker programs.
+          </p>
+          <button class="read-more-btn" onclick="toggleServiceDetail(this)">Read More</button>
+          <div class="service-detail">
+            <p>Our Canada Work Visa service includes:</p>
+            <p>- Express Entry profile creation and management</p>
+            <p>- Provincial Nominee Program (PNP) applications</p>
+            <p>- LMIA-exempt work permit applications</p>
+            <p>- Post-graduation work permit assistance</p>
+            <p>- Permanent residency pathway guidance</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UK Work Visa -->
+      <div class="service-card" data-country="uk-work">
+        <div class="card-image-container">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="Workers in UK" class="card-image-bg">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3395769d-d48c-45eb-9be0-1bee50e5fbd7.png" 
+               alt="Work icon" class="card-icon">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">UK Work Visa</h2>
+          <p class="card-description">
+            Secure your UK work visa with our professional guidance. We assist with skilled worker visas, intra-company transfers, and more.
+          </p>
+          <button class="read-more-btn" onclick="toggleServiceDetail(this)">Read More</button>
+          <div class="service-detail">
+            <p>Our UK Work Visa service includes:</p>
+            <p>- Skilled Worker visa application support</p>
+            <p>- Intra-company transfer visa processing</p>
+            <p>- Sponsor license guidance for employers</p>
+            <p>- Certificate of Sponsorship (CoS) assistance</p>
+            <p>- Indefinite Leave to Remain (ILR) applications</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-section" id="why-choose">
+    <div class="why-choose-container">
+      <div class="heading-group" aria-label="Why Choose Gabstep Heading">
+        <img src="image/gabstep_logo.png" alt="" style="width: 10px;">
+        <span>Why Choose</span>
+        <img src="image/gabstep_logo2.png" alt="" style="width: 10px;">
+      </div>
+      <h1 class="section-heading">Gabstep</h1>
+
+      <div class="content-grid" aria-label="Gabstep key features">
+        <div class="column" role="list">
+          <article class="item" role="listitem" tabindex="0" aria-label="Holistic Counselling Expertise">
+            <div class="icon-bg" aria-hidden="true">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h3>Holistic Counselling Expertise</h3>
+              <p>Brilliant guidance on countries and courses by experienced counsellors.</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem" tabindex="0" aria-label="Unbiased University Recommendation">
+            <div class="icon-bg" aria-hidden="true">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div>
+              <h3>Unbiased University Recommendation</h3>
+              <p>No direct university tie-ups. We provide genuine and unbiased suggestions.</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem" tabindex="0" aria-label="Comprehensive Student Support">
+            <div class="icon-bg" aria-hidden="true">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div>
+              <h3>Comprehensive Student Support</h3>
+              <p>Assisting students at all levels: Undergrad, Masters, MBA, and Ph.D.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="center-circle" aria-label="Gabstep NG logo" role="img" aria-describedby="gabstep-desc">
+          <img src="image/gabstep_logo.png" alt="logo">
+          <span id="gabstep-desc">Gabstep NG</span>
+        </div>
+
+        <div class="column" role="list">
+          <article class="item" role="listitem" tabindex="0" aria-label="Diverse Field Specialization">
+            <div class="icon-bg" aria-hidden="true">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
+            <div>
+              <h3>Diverse Field Specialization</h3>
+              <p>We are diverse in fields like design, finance, film and more.</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem" tabindex="0" aria-label="Customized Content Excellence">
+            <div class="icon-bg" aria-hidden="true">
+              <i class="fa-solid fa-file-lines" style="transform: scaleX(-1);"></i>
+            </div>
+            <div>
+              <h3>Customized Content Excellence</h3>
+              <p>We create exceptional SOPs and LORs from scratch based on student input.</p>
+            </div>
+          </article>
+
+          <article class="item" role="listitem" tabindex="0" aria-label="Global University Placement">
+            <div class="icon-bg" aria-hidden="true">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div>
+              <h3>Global University Placement</h3>
+              <p>We have placed students to top universities worldwide, spanning USA, UK, Spain, Canada, and more.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="cta-wrapper" role="contentinfo" aria-label="Booking section">
+        <h2>We cater our service to students worldwide!</h2>
+        <p>All our services are seamlessly conducted online, eliminating the need for any office visits during the
+          application process.
+          Our dedicated team will stay in constant communication with you through Email, Zoom, and WhatsApp throughout
+          your
+          application journey!<br /><strong>Book your 30 min FREE ABROAD CONSULTANCY session!</strong></p>
+        <button class="btn-primary" aria-label="Book Your Free Online Session">
+          Book Your Free Online Session <span class="arrow" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="achievements-section" id="achievements">
+    <div class="achievements-container">
+      <div class="achievements-card">
+        <div class="card-bg-behind"></div>
+        <div class="achievements-content">
+          <div class="achievements-text">
+            <h2 class="achievements-title">Our Achievements</h2>
+            <ul class="achievements-list">
+              <li>Strong track record of placing students in top European universities</li>
+              <li>Track record of Ivy League University admits in the USA every year</li>
+              <li>Over 500 students placed at their dream universities annually</li>
+              <li>Consistent success in helping students obtain scholarships</li>
+              <li>Secured full-funding for PhD programs at top universities</li>
+            </ul>
+            <button class="download-btn" aria-label="Download our Brochure">
+              <i class="fas fa-download"></i>
+              Download our Brochure
+            </button>
+          </div>
+          <div class="achievements-image">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c32e0cb1-86d2-4d62-8624-d08e62273861.png"
+              alt="Illustration depicting a gold trophy adorned with a number one medal, surrounded by people celebrating with stars and confetti in cheerful colors"
+              onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b4f4777f-1bad-465d-8326-69e26cb651e0.png';"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Testimonials Section -->
+<section class="testimonies-section" id="testimonials">
+  <div class="testimonies-header">
+    <h2>Testimonials</h2>
+    <p>Hear what our students have to say about their experiences with Gabstep</p>
+  </div>
+  
+  <div class="testimonial-container">
+    <div class="testimonial-grid">
+      <!-- Testimonial 1 -->
+      <div class="service-card testimonial-card" data-country="canada">
+        <div class="card-image-container">
+          <img src="image/canada.jpg" 
+               alt="Happy student" class="card-image-bg">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Adeola Johnson</h2>
+          <p class="card-description">
+            "Gabstep made my dream of studying in Canada a reality. Their guidance through the entire process was exceptional. From university selection to visa approval, they were with me every step of the way."
+          </p>
+          <div class="testimonial-meta">
+            <span class="testimonial-location">University of Toronto, Canada</span>
+            <span class="testimonial-rating">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 2 -->
+      <div class="service-card testimonial-card" data-country="uk">
+        <div class="card-image-container">
+          <img src="image/uktest.jpg" 
+               alt="Happy student" class="card-image-bg">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Emeka Okonkwo</h2>
+          <p class="card-description">
+            "The team at Gabstep is truly professional. They helped me secure admission to a top UK university with a scholarship. Their attention to detail in preparing my application materials was impressive."
+          </p>
+          <div class="testimonial-meta">
+            <span class="testimonial-location">University of Manchester, UK</span>
+            <span class="testimonial-rating">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial 3 -->
+      <div class="service-card testimonial-card" data-country="malta">
+        <div class="card-image-container">
+          <img src="image/cana.jpg
+          " 
+               alt="Happy student" class="card-image-bg">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Chioma Eze</h2>
+          <p class="card-description">
+            "I was skeptical at first, but Gabstep exceeded all my expectations. They found the perfect program for me in Malta and handled everything seamlessly. I couldn't have done it without their expertise."
+          </p>
+          <div class="testimonial-meta">
+            <span class="testimonial-location">University of Malta</span>
+            <span class="testimonial-rating">★★★★★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ Section -->
+  <section aria-label="Frequently Asked Questions" class="faq-section">
+    <header>
+      <h3>Frequently Asked Questions</h3>
+    </header>
+
+    <div class="faq-list">
+      <!-- FAQ item template repeated -->
+      <details class="faq-item" open>
+        <summary class="faq-question">What services does the travel agency provide?</summary>
+        <div class="faq-answer">
+          The travel agency specializes in providing Canada visas for families and student visas, as well as UK study visas.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Who can benefit from the agency's services?</summary>
+        <div class="faq-answer">
+          Families and students who are planning to travel to Canada or study in the UK can benefit from the agency's services.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How can I book an appointment?</summary>
+        <div class="faq-answer">
+          To book an appointment, you can visit our website and fill out the appointment booking form.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What documents are required for visa application?</summary>
+        <div class="faq-answer">
+          The required documents for visa application vary depending on the type of visa. Please contact our agency for detailed information.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can the agency assist with visa application process?</summary>
+        <div class="faq-answer">
+          Yes, the agency can assist you with the visa application process. Our experienced team will guide you through the entire process.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- News & Blog Section -->
+  <section class="section" id="news-blog">
+    <div class="news-header">
+      <h2 class="section-title">News & Blog</h2>
+      <p>Stay informed with our updates, industry trends, and expert insights. Explore our blog for the latest articles and news</p>
+    </div>
+
+    <div class="blog-grid">
+      <!-- Card 1 -->
+      <a href="https://tribuneonlineng.com/tag/gabstep/" class="blog-card" target="_blank" rel="noopener noreferrer">
+        <div class="blog-image">
+          <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bb86625b-1f1f-4893-b366-a262857d15e5.png" 
+            alt="Photo showing a red and yellow flag on left side with urban skyline under clear sky, representing study in Spain" 
+            loading="lazy" 
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <div class="blog-content">
+          <time class="blog-date" datetime="2025-08-16">August 16 2025</time>
+          <h3 class="blog-title">Study In Spain From Nigeria</h3>
+          <p class="blog-source">Tribune Online</p>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="https://tribuneonlineng.com/tag/gabstep/" class="blog-card" target="_blank" rel="noopener noreferrer">
+        <div class="blog-image">
+          <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a3df40ff-03cc-400e-ab31-5552ff82d0e3.png" 
+            alt="Close-up of a person holding a pencil to fill an exam paper with a smartwatch on wrist in bright natural light" 
+            loading="lazy" 
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <div class="blog-content">
+          <time class="blog-date" datetime="2025-08-16">August 16 2025</time>
+          <h3 class="blog-title">Japa To Another Country</h3>
+          <p class="blog-source">Tribune Online</p>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="https://tribuneonlineng.com/tag/gabstep/" class="blog-card" target="_blank" rel="noopener noreferrer">
+        <div class="blog-image">
+          <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2dd6a400-2fb7-4462-b2be-52535b148b97.png" 
+            alt="Colorful image with large neon UK COS Visa sign on dark city street background at night" 
+            loading="lazy" 
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <div class="blog-content">
+          <time class="blog-date" datetime="2025-09-16">September 16 2025</time>
+          <h3 class="blog-title">UK COS Visa Now Available</h3>
+          <p class="blog-source">Tribune Online</p>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="https://tribuneonlineng.com/tag/gabstep/" class="blog-card" target="_blank" rel="noopener noreferrer">
+        <div class="blog-image" style="background-color: #e6f0e6; display: flex; justify-content: center; align-items: center;">
+          <img src="https://tribuneonlineng.com/wp-content/uploads/2023/07/Tribune-logo.png" 
+               alt="Tribune Online logo" 
+               style="max-width: 80%; max-height: 80%;">
+        </div>
+        <div class="blog-content">
+          <time class="blog-date" datetime="2025-08-16">August 16 2025</time>
+          <h3 class="blog-title">More Gabstep News</h3>
+          <p class="blog-source">Tribune Online</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Consultation Section -->
+  <section class="consultation-section">
+    <div class="wave-bg"></div>
+    <div class="consultation-content">
+      <div class="consultation-text">
+        <h3>Why you should talk to us?</h3>
+        <p>
+          With years of experience, Gabstep is the most reputable name in study abroad consulting and career consulting services. Our committed team, serving as study abroad consultants and education advisors, is driven and possesses industry expertise to guide you toward a fruitful career journey.
+        </p>
+        <p>
+          Connect with our advisor to explore Gabstep best services. Discover how our study abroad consultation and career consultation can help you follow your passion and capitalize on the best career possibilities in the field.
+        </p>
+      </div>
+
+      <form id="consultForm" class="consultation-form" action="https://formspree.io/f/xrblbbee" novalidate method="POST">
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          placeholder="Your Name*" 
+          aria-label="Your Name"
+        />
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="Your Mail*" 
+          aria-label="Your Email"
+        />
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone" 
+          placeholder="Phone" 
+          aria-label="Phone"
+        />
+        <input 
+          type="text" 
+          id="subject" 
+          name="subject" 
+          placeholder="Subject" 
+          aria-label="Subject"
+        />
+
+        <button type="submit" aria-label="Consult Today">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          Consult Today
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>We are <span>Gabstep!</span></h2>
+      <p>
+        Gabstep, the best career and abroad consultants in Nigeria, offers a range of services that covers 360° of Education, including career counseling, study abroad consultation, test preparation, LOR & SOP Preparation, personalized advice for a successful academic journey, Student Loan, Visa processing, etc. With years of experience, Gabstep is the most reputable name in career counseling and abroad education services. Connect with us now for a fruitful career journey.
+      </p>
+    </div>
+    
+    <div class="footer-info">
+      <h3>Official info</h3>
+      <ul>
+        <li>
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 10c0 6-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Suite 103, Philez Plaza, 2, Airport Road Ajao Estate, Lagos State. Nigeria.</span>
+        </li>
+        <li>
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 10c0 6-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>1 Kings Plaza Alafia Avenue, Behind Total Oluyole Elelu, Ibadan, Oyo State, Nigeria.</span>
+        </li>
+        <li>
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 10c0 6-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Opposite Phase 1 Obafemi Awolowo University Teaching Hospital, Ile-Ife, Osun State, Nigeria.</span>
+        </li>
+        <li>
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4h16v16H4z"></path>
+            <path d="M22 6l-10 7L6 9"></path>
+          </svg>
+          <a href="mailto:gabstep.ng@gmail.com">gabstep.ng@gmail.com</a>
+        </li>
+        <li>
+          <div class="footer-contact">
+            <span>
+              <a href="tel:+2349013111121" style="text-decoration: none; color: inherit;">
+                <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.84 19.84 0 0 1-8.63-3.1 19.5 19.5 0 0 1-6-6 19.84 19.84 0 0 1-3.1-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 13 13 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 13 13 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"></path>
+                </svg>
+                +2349013111121
+              </a>
+            </span>
+            <span>
+              <a href="tel:+2349013111121" style="text-decoration: none; color: inherit;">
+                <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.84 19.84 0 0 1-8.63-3.1 19.5 19.5 0 0 1-6-6 19.84 19.84 0 0 1-3.1-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 13 13 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 13 13 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"></path>
+                </svg>
+                +2349013111121
+              </a>
+            </span>
+          </div>
+        </li>
+      </ul>
+      
+      <div class="footer-social">
+        <a href="https://www.facebook.com/gabstep.official?mibextid=ZbWKwL" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/gabstep.ng?utm_source=qr&igsh=ZWJvY3ZzYTdkbzZl" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@gabstep.ng?_t=ZM-8xyA3K6vw18&_r=1" 
+           aria-label="TikTok" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        
+          <a href="https://wa.me/09013111121">
+          <i class="fa-brands fa-whatsapp"></i>
+          </a>
+      </div>
+    </div>
+    
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <nav>
+        <a href="index.html">
+          <i class="fas fa-chevron-right"></i>
+          Home
+        </a>
+        <a href="about.html">
+          <i class="fas fa-chevron-right"></i>
+          About
+        </a>
+        <a href="index.html#services">
+          <i class="fas fa-chevron-right"></i>
+          Services
+        </a>
+        <a href="contact.html">
+          <i class="fas fa-chevron-right"></i>
+          Contact
+        </a>
+        <a href="feedback.html">
+          <i class="fas fa-chevron-right"></i>
+          Feedback
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="footer-description">
+    <p>
+      Unlock global opportunities with Gabstep, your trusted partner for study abroad and career counseling. As a prominent study abroad consultant and career counselor, we provide expert guidance for a seamless transition to abroad education and career selection. Our team, comprising dedicated education consultants, specializes in offering personalized support for your academic journey. Whether you seek study abroad consultation or need assistance from a career counselor, we're here for you.
+    </p>
+    <p>
+      Discover the best countries to study abroad with insights from our best study abroad consultants in Nigeria. We strive to be the best consultancy for abroad studies, offering
+    </p>
+    <p>
+      With us, your journey is not just about finding the best country for study abroad - it's about personal growth and success. At Gabstep, we aim to be the top choice for students seeking a reliable solution for abroad studies and career consultants.
+    </p>
+  </div>
+
+  <div class="footer-copyright">
+    © Gabstep NG 2025. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // Update your preloader JavaScript
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    
+    // Wait for the animation to complete at least one full cycle
+    setTimeout(function() {
+      preloader.classList.add('fade-out');
+      
+      setTimeout(function() {
+        preloader.style.display = 'none';
+      }, 500);
+    }, 2500); // Show for at least 2.5 seconds to see full animation
+  });
+  
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+  });
+
+  // Theme toggle functionality
+  const themeToggle = document.getElementById('themeToggle');
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const currentTheme = localStorage.getItem('theme');
+
+  if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+    document.body.setAttribute('data-theme', 'dark');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.body.getAttribute('data-theme');
+    if (currentTheme === 'dark') {
+      document.body.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.body.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+
+  // Dropdown menu functionality
+  document.querySelectorAll('.dropdown-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetId = button.getAttribute('data-target');
+      const dropdown = document.getElementById(targetId);
+      dropdown.classList.toggle('open');
+    });
+  });
+
+  document.querySelectorAll('.dropdown-close-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetId = button.getAttribute('data-target');
+      const dropdown = document.getElementById(targetId);
+      dropdown.classList.remove('open');
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown-menu') && !e.target.closest('.dropdown-btn')) {
+      document.querySelectorAll('.dropdown-menu').forEach(dropdown => {
+        dropdown.classList.remove('open');
+      });
+    }
+  });
+
+  // Consultant button alert
+  document.getElementById('consultantBtn').addEventListener('click', () => {
+    alert('Thank you for your interest! Our consultant will contact you shortly.');
+  });
+
+  // Read more button functionality
+  const readMoreBtn = document.getElementById('readMoreBtn');
+  const moreInfo = document.getElementById('more-info');
+
+  readMoreBtn.addEventListener('click', () => {
+    const isExpanded = readMoreBtn.getAttribute('aria-expanded') === 'true';
+    readMoreBtn.setAttribute('aria-expanded', !isExpanded);
+    moreInfo.style.display = isExpanded ? 'none' : 'block';
+    readMoreBtn.textContent = isExpanded ? 'Read More' : 'Read Less';
+  });
+// Education Carousel functionality
+const educationCarousel = document.getElementById('education-carousel');
+const eduPrevBtn = document.getElementById('prev-btn');
+const eduNextBtn = document.getElementById('next-btn');
+const eduIndicators = document.querySelectorAll('.carousel-indicators .indicator');
+let currentEduSlide = 0;
+const totalEduSlides = document.querySelectorAll('.carousel-slide').length;
+
+function updateEducationCarousel() {
+  // Check if elements exist before manipulating them
+  if (educationCarousel && eduIndicators.length > 0) {
+    educationCarousel.style.transform = `translateX(-${currentEduSlide * 100}%)`;
+    
+    // Update indicators
+    eduIndicators.forEach((indicator, index) => {
+      indicator.classList.toggle('active', index === currentEduSlide);
+    });
+  }
+}
+
+// Add event listeners only if elements exist
+if (eduPrevBtn) {
+  eduPrevBtn.addEventListener('click', () => {
+    currentEduSlide = (currentEduSlide - 1 + totalEduSlides) % totalEduSlides;
+    updateEducationCarousel();
+  });
+}
+
+if (eduNextBtn) {
+  eduNextBtn.addEventListener('click', () => {
+    currentEduSlide = (currentEduSlide + 1) % totalEduSlides;
+    updateEducationCarousel();
+  });
+}
+
+// Click on indicators
+eduIndicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    currentEduSlide = index;
+    updateEducationCarousel();
+  });
+});
+
+// Auto-rotate education carousel
+if (totalEduSlides > 1) {
+  setInterval(() => {
+    currentEduSlide = (currentEduSlide + 1) % totalEduSlides;
+    updateEducationCarousel();
+  }, 5000);
+}
+
+// Service tabs functionality
+function showStudyVisas() {
+  const studyVisas = document.getElementById('study-visas');
+  const familyVisas = document.getElementById('family-visas');
+  const workVisas = document.getElementById('work-visas');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  
+  if (studyVisas && familyVisas && workVisas && tabBtns.length > 0) {
+    studyVisas.style.display = 'grid';
+    familyVisas.style.display = 'none';
+    workVisas.style.display = 'none';
+    
+    // Update active tab
+    tabBtns.forEach(btn => {
+      btn.classList.remove('active-tab');
+    });
+    const firstTabBtn = document.querySelector('.tab-btn:nth-child(1)');
+    if (firstTabBtn) {
+      firstTabBtn.classList.add('active-tab');
+    }
+  }
+}
+
+function showFamilyVisas() {
+  const studyVisas = document.getElementById('study-visas');
+  const familyVisas = document.getElementById('family-visas');
+  const workVisas = document.getElementById('work-visas');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  
+  if (studyVisas && familyVisas && workVisas && tabBtns.length > 0) {
+    studyVisas.style.display = 'none';
+    familyVisas.style.display = 'grid';
+    workVisas.style.display = 'none';
+    
+    // Update active tab
+    tabBtns.forEach(btn => {
+      btn.classList.remove('active-tab');
+    });
+    const secondTabBtn = document.querySelector('.tab-btn:nth-child(2)');
+    if (secondTabBtn) {
+      secondTabBtn.classList.add('active-tab');
+    }
+  }
+}
+
+function showWorkVisas() {
+  const studyVisas = document.getElementById('study-visas');
+  const familyVisas = document.getElementById('family-visas');
+  const workVisas = document.getElementById('work-visas');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  
+  if (studyVisas && familyVisas && workVisas && tabBtns.length > 0) {
+    studyVisas.style.display = 'none';
+    familyVisas.style.display = 'none';
+    workVisas.style.display = 'grid';
+    
+    // Update active tab
+    tabBtns.forEach(btn => {
+      btn.classList.remove('active-tab');
+    });
+    const thirdTabBtn = document.querySelector('.tab-btn:nth-child(3)');
+    if (thirdTabBtn) {
+      thirdTabBtn.classList.add('active-tab');
+    }
+  }
+}
+
+// Toggle service detail dropdown
+function toggleServiceDetail(button) {
+  if (!button) return;
+  
+  const card = button.closest('.service-card');
+  if (!card) return;
+  
+  const detail = card.querySelector('.service-detail');
+  if (detail) {
+    detail.classList.toggle('show');
+    // Update button text
+    button.textContent = detail.classList.contains('show') ? 'Read Less' : 'Read More';
+  }
+}
+
+// Consultation form submission
+  document.getElementById('consultForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // Collect inputs
+    const data = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      subject: form.subject.value.trim()
+    };
+
+    // Simple alert for demo purpose
+    alert(
+      'Consultation form submitted:\n' + 
+      JSON.stringify(data, null, 2) + 
+      '\n\nWe will contact you soon.'
+    );
+
+    form.reset();
+  });
+
+  // FAQ functionality
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // Close all other items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.removeAttribute('open');
+        }
+      });
+    });
+  });
+
+  // Initialize page
+  document.addEventListener('DOMContentLoaded', () => {
+    showStudyVisas(); // Show study visas by default
+  });
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/687a1cc097faec19144dd510/1j0eg0krl';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>

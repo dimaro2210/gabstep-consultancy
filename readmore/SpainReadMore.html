@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spain Study Visa - Gabstep NG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link rel="icon" href="../image/gabstep_favicon.png"> 
+  <style>
+    /* Reuse the same styles from the main page */
+    :root {
+      --primary-color: #166534;
+      --primary-dark: #14532d;
+      --text-light: #f0f0f0;
+      --text-dark: #333333;
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --green-light: #e6f0e6;
+      --green-dark: #2f4f33;
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1a1a1a;
+      --text-color: #f0f0f0;
+      --card-bg: rgba(30, 30, 30, 0.9);
+    }
+    :root {
+      --primary-color: #166534;
+      --primary-light: #059669;
+      --primary-dark: #14532d;
+      --text-color: #333;
+      --bg-color: #f8f9fa;
+      --header-bg: #f0fdf4;
+      --header-text: #166534;
+      --card-bg: #fff;
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --footer-bg: #000;
+      --footer-text: #d1d5db;
+      --green-light: #e6f0e6;
+      --green-dark: #2f4f33;
+      --green-mid: #4a7c3a;
+    }
+
+    [data-theme="dark"] {
+      --primary-color: #4ade80;
+      --primary-light: #34d399;
+      --primary-dark: #166534;
+      --text-color: #f0f0f0;
+      --bg-color: #1a1a1a;
+      --header-bg: #264734;
+      --header-text: #f0f0f0;
+      --card-bg: #2d2d2d;
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      --footer-bg: #050505;
+      --footer-text: #b0b0b0;
+      --green-light: #1a2a1a;
+      --green-dark: #4a7c3a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .service-detail-page {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .service-detail-carousel {
+      height: 500px;
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .service-detail-carousel .carousel {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .service-detail-carousel .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .service-detail-carousel .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .service-detail-carousel .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+
+    .service-detail-carousel .carousel-btn {
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .service-detail-carousel .carousel-btn:hover {
+      background: rgba(255, 255, 255, 0.8);
+      transform: scale(1.1);
+    }
+
+    .service-detail-carousel .carousel-indicators {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .service-detail-carousel .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .service-detail-carousel .indicator:hover {
+      transform: scale(1.2);
+    }
+
+    .service-detail-carousel .indicator.active {
+      background: white;
+      transform: scale(1.2);
+    }
+
+    .service-detail-content {
+      margin: 2rem 0;
+    }
+
+    .service-detail-content h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .service-detail-content h3 {
+      color: var(--primary-dark);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.5rem;
+    }
+
+    .service-detail-content p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .service-detail-content ul {
+      margin-bottom: 1.5rem;
+      padding-left: 2rem;
+    }
+
+    .service-detail-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .back-to-home {
+      display: inline-block;
+      margin: 2rem 0;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-to-home:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .load-more-btn {
+      display: block;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .load-more-btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .additional-cards {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .service-card {
+      background-color: var(--card-bg);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: scale(1.03) translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-image-container {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-image-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .card-image-bg {
+      transform: scale(1.1);
+    }
+
+    .card-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+      transition: all 0.5s ease;
+    }
+
+    .service-card:hover .card-icon {
+      transform: translate(-50%, -50%) rotateY(180deg) scale(1.1);
+    }
+
+    .card-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .card-description {
+      color: #555;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .read-more-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+
+    .read-more-btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .service-detail-carousel {
+        height: 300px;
+      }
+      
+      .service-detail-content h2 {
+        font-size: 1.5rem;
+      }
+      
+      .service-detail-content h3 {
+        font-size: 1.2rem;
+      }
+    }
+     /* Footer Styles */
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 4rem 2rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .footer-about {
+      grid-column: 1 / -1;
+    }
+
+    @media (min-width: 768px) {
+      .footer-about {
+        grid-column: auto;
+      }
+    }
+ @media (max-width: 768px) {
+    .footer-links {
+      display: none;
+    }
+    
+    /* Keep the footer container as 2 columns on mobile */
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+    .footer-about h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .footer-about h2 span {
+      color: #4ade80;
+    }
+
+    .footer-about p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--footer-text);
+    }
+
+    .footer-info h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-info ul {
+      list-style: none;
+    }
+
+    .footer-info li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .footer-info svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+      color: #4ade80;
+    }
+
+    .footer-info a {
+      color: var(--footer-text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-info a:hover {
+      color: white;
+    }
+
+    .footer-contact {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 0.5rem;
+    }
+
+    .footer-contact svg {
+      width: 1rem;
+      height: 1rem;
+      color: #4ade80;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .footer-social a {
+      color: var(--footer-text);
+      transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+      color: #4ade80;
+    }
+
+    .footer-social svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .footer-links h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--footer-text);
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: #4ade80;
+    }
+
+    .footer-links svg {
+      width: 1rem;
+      height: 1rem;
+      color: #4ade80;
+    }
+
+    .footer-description {
+      max-width: 800px;
+      margin: 2rem auto 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    .footer-copyright {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #374151;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="service-detail-page">
+    <!-- Image Carousel -->
+    <div class="service-detail-carousel">
+      <div class="carousel" id="detail-carousel">
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="University of Barcelona campus" class="carousel-image">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="Students in Spain" class="carousel-image">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+               alt="Spanish cityscape" class="carousel-image">
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="detail-prev-btn">
+          
+<i class="fa-solid fa-less-than"></i>
+        </button>
+        <button class="carousel-btn" id="detail-next-btn">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <div class="carousel-indicators" id="detail-indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+      </div>
+    </div>
+
+    <!-- Detailed Content -->
+    <div class="service-detail-content">
+      <h2>Spain Study Visa</h2>
+      <p>Spain offers international students a vibrant cultural experience combined with high-quality education at affordable costs. Our Spain Study Visa service helps you navigate the application process for this sunny Mediterranean destination.</p>
+      
+      <h3>Why Study in Spain?</h3>
+      <ul>
+        <li>World-renowned universities with many English-taught programs</li>
+        <li>Affordable tuition fees and living costs compared to other Western European countries</li>
+        <li>Beautiful climate and high quality of life</li>
+        <li>Opportunity to learn Spanish, the world's second most spoken native language</li>
+        <li>Rich cultural heritage and vibrant student life</li>
+      </ul>
+      
+      <h3>Our Services Include:</h3>
+      <ul>
+        <li>University selection and application assistance</li>
+        <li>Guidance on degree homologation (if required)</li>
+        <li>Help with preparing required documents for visa application</li>
+        <li>Visa application support and interview preparation</li>
+        <li>Assistance with accommodation search and health insurance</li>
+        <li>Information on part-time work opportunities during studies</li>
+      </ul>
+      
+      <h3>Eligibility Requirements:</h3>
+      <p>To study in Spain, you typically need:</p>
+      <ul>
+        <li>High school diploma for bachelor's programs or bachelor's degree for master's</li>
+        <li>Proof of Spanish or English proficiency depending on program</li>
+        <li>Sufficient financial means (about €600-700 per month)</li>
+        <li>Health insurance coverage</li>
+        <li>Acceptance letter from a Spanish educational institution</li>
+      </ul>
+      
+      <h3>Post-Study Opportunities</h3>
+      <p>After graduation, international students can apply for a one-year job search visa. With a job offer, you may qualify for a work and residence permit.</p>
+      
+     
+   <a href="../index.html" class="back-to-home">Back to Home</a>
+      
+      <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h2>We are <span>Gabstep!</span></h2>
+        <p>
+          Gabstep, the best career and abroad consultants in Nigeria, offers a range of services that covers 360° of Education, including career counseling, study abroad consultation, test preparation, LOR & SOP Preparation, personalized advice for a successful academic journey, Student Loan, Visa processing, etc. With years of experience, Gabstep is the most reputable name in career counseling and abroad education services. Connect with us now for a fruitful career journey.
+        </p>
+      </div>
+      
+      <div class="footer-info">
+        <h3>Official info</h3>
+        <ul>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 10c0 6-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Suite 103, Philez Plaza, 2, Airport Road Ajao Estate, Lagos State. Nigeria.</span>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 10c0 6-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>1 Kings Plaza Alafia Avenue, Behind Total Oluyole Elelu, Ibadan, Oyo State, Nigeria.</span>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 10c0 6-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Opposite Phase 1 Obafemi Awolowo University Teaching Hospital, Ile-Ife, Osun State, Nigeria.</span>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h16v16H4z"></path>
+              <path d="M22 6l-10 7L6 9"></path>
+            </svg>
+            <a href="mailto:gabstep.ng@gmail.com">gabstep.ng@gmail.com</a>
+          </li>
+          <li>
+            <div class="footer-contact">
+               <a href="tel:+2349013111121" style="text-decoration: none; color: inherit;">
+    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.84 19.84 0 0 1-8.63-3.1 19.5 19.5 0 0 1-6-6 19.84 19.84 0 0 1-3.1-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 13 13 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 13 13 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"></path>
+    </svg>
+    +2349013111121
+  </a>
+</span>
+<span>
+  <a href="tel:+2349013111121" style="text-decoration: none; color: inherit;">
+    <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.84 19.84 0 0 1-8.63-3.1 19.5 19.5 0 0 1-6-6 19.84 19.84 0 0 1-3.1-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 13 13 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 13 13 0 0 0 2.81.7 2 2 0 0 1 1.72 2z"></path>
+    </svg>
+    +2349013111121
+  </a>
+            </div>
+          </li>
+        </ul>
+        
+      <div class="footer-social">
+        <a href="https://www.facebook.com/gabstep.official?mibextid=ZbWKwL" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/gabstep.ng?utm_source=qr&igsh=ZWJvY3ZzYTdkbzZl" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@gabstep.ng?_t=ZM-8xyA3K6vw18&_r=1" 
+           aria-label="TikTok" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <i class="fab fa-tiktok"></i>
+        </a>
+           <a href="https://wa.me/09013111121">
+          <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <nav>
+          <a href="index.html">
+            <i class="fas fa-chevron-right"></i>
+            Home
+          </a>
+          <a href="index.html#services">
+            <i class="fas fa-chevron-right"></i>
+            Services
+          </a>
+          <a href="contact.html">
+            <i class="fas fa-chevron-right"></i>
+            Contact
+          </a>
+          <a href="#">
+            <i class="fas fa-chevron-right"></i>
+            Appointment
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-description">
+      <p>
+        Unlock global opportunities with Gabstep, your trusted partner for study abroad and career counseling. As a prominent study abroad consultant and career counselor, we provide expert guidance for a seamless transition to abroad education and career selection. Our team, comprising dedicated education consultants, specializes in offering personalized support for your academic journey. Whether you seek study abroad consultation or need assistance from a career counselor, we're here for you.
+      </p>
+      <p>
+        Discover the best countries to study abroad with insights from our best study abroad consultants in Nigeria. We strive to be the best consultancy for abroad studies, offering
+      </p>
+      <p>
+        With us, your journey is not just about finding the best country for study abroad – it's about personal growth and success. At Gabstep, we aim to be the top choice for students seeking a reliable solution for abroad studies and career consultants.
+      </p>
+    </div>
+
+    <div class="footer-copyright">
+      © Gabstep NG 2025. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    // Carousel functionality for detail page
+    const detailCarousel = document.getElementById('detail-carousel');
+    const detailPrevBtn = document.getElementById('detail-prev-btn');
+    const detailNextBtn = document.getElementById('detail-next-btn');
+    const detailIndicators = document.querySelectorAll('#detail-indicators .indicator');
+    let detailCurrentSlide = 0;
+    const detailTotalSlides = document.querySelectorAll('#detail-carousel .carousel-slide').length;
+
+    function updateDetailCarousel() {
+      detailCarousel.style.transform = `translateX(-${detailCurrentSlide * 100}%)`;
+      
+      // Update indicators
+      detailIndicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === detailCurrentSlide);
+      });
+    }
+
+    detailPrevBtn.addEventListener('click', () => {
+      detailCurrentSlide = (detailCurrentSlide - 1 + detailTotalSlides) % detailTotalSlides;
+      updateDetailCarousel();
+    });
+
+    detailNextBtn.addEventListener('click', () => {
+      detailCurrentSlide = (detailCurrentSlide + 1) % detailTotalSlides;
+      updateDetailCarousel();
+    });
+
+    // Click on indicators
+    detailIndicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        detailCurrentSlide = index;
+        updateDetailCarousel();
+      });
+    });
+
+    // Auto-rotate carousel
+    setInterval(() => {
+      detailCurrentSlide = (detailCurrentSlide + 1) % detailTotalSlides;
+      updateDetailCarousel();
+    }, 5000);
+
+    // Load more button functionality
+    document.getElementById('loadMoreBtn').addEventListener('click', function() {
+      const additionalCards = document.getElementById('additionalCards');
+      additionalCards.style.display = 'grid';
+      this.style.display = 'none';
+      
+      // Scroll to the additional cards
+      additionalCards.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/687a1cc097faec19144dd510/1j0eg0krl';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
